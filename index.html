@@ -523,6 +523,7 @@ fetch('busRoutes.json')
     .then(response => response.json())
     .then(data => {
         busRoutes = data;
+	console.log(busRoutes);
         currentRoute = Object.keys(busRoutes)[0];
         //delete currentRoute["Destination Order"];
         updateRouteList();
@@ -535,13 +536,14 @@ fetch('busRoutes.json')
         document.getElementById('loadingMessage').textContent = 'Error loading bus schedule. Please try again later.';
     });
 
-
+/*
 // Initial display
 displaySchedule();
 updateRouteList();
 
 // Update the schedule every minute
 setInterval(displaySchedule, 60000);
+*/
 
 // Add event listener for toggle switch
 document.getElementById('scheduleToggle').addEventListener('change', displaySchedule);
