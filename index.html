@@ -396,7 +396,8 @@ function displaySchedule() {
         scheduleDiv.innerHTML = '<p>No schedule available for this route.</p>';
         return;
     }
-
+    console.log(routes);
+    
     const uniqueDestinations = new Map();
     const now = new Date();
     const currentCalendarDate = `${now.getFullYear()}/${now.getMonth() + 1}/${now.getDate()}`;
